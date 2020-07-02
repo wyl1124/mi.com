@@ -1,7 +1,7 @@
 <?php
-    include('../src/lib/conn.php');
+    include('./conn.php');
 
-    $sql = "select * from product";
+    $sql = "select * from products";
 
     $res = $mysqli ->query($sql);
 

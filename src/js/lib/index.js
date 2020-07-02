@@ -5,10 +5,10 @@ define(['jquery'],function($){
         render:function(){
             $.ajax({
                 type: "get",
-                url: "url",
+                url:`${baseUrl}/interface/getall.php`,
                 dataType: "json",
                 success: function (response) {
-                    
+                    console.log(response);
                 }
             });
         }

@@ -9,7 +9,7 @@
         if (this.value != '') {
             $ajax({
                 type: 'post',
-                url: 'http://localhost/h5-2003/src/interface/eg04.login.php',
+                url: 'http://localhost/h5-2003/item/interface/eg04.login.php',
                 data: {
                     username: username.value,//将数据传给后端
                     password: passworde.value,

@@ -9,7 +9,7 @@
     //    如果找到 表示 登录成功
     //    如果没有找到  提示 用户名或密码错误  跳转页面到 登录页
 
-    include('../lib/conn.php');
+    include('./conn.php');
 
     $username = $_REQUEST['username'];
     $password = $_REQUEST['password'];

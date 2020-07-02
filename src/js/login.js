@@ -6,7 +6,7 @@
     btn.onclick = function () {
         $ajax({
             type: 'post',
-            url: '../lib/conn.php',
+            url: '.conn.php',
             data: {//将用户名和密码传给后端
                 user: username.value,
                 pass: password.value,
