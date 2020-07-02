@@ -11,20 +11,28 @@ define(['jquery'],function($){
                     console.log(res);
                     let temp = '';
                     
-                    res.forEach(elm=>{
+                    res.forEach(elm => {
                         console.log(elm.pic);
-                        temp +=`<li class="item">
-                        <a href="${baseUrl}/src/html/product.html?id=${elm.id}">
-                            <div class="p-pic">
-                                <img src="${baseUrl}/src/${elm.pic}">
+                        let pic = JSON.parse(elm.pic);
+                        console.log(pic[0].src);
+                        temp += `<li class="item">
+                            <a href="${baseUrl}/src/html/product.html?id=${elm.id}">
+                                <div class="p-pic">
+                                    <img src="${baseUrl}/src/${pic[0].src}">
+                                </div>
+                                <div class="p-title">
+                                    ${elm.title}
+                                </div>
+                                <div class="p-price"><span class="yuan">￥</span>${elm.price}</div>
+                                <div class="marking save">
+                                <div class="boxs">
+                                    <i>已省</i>
+                                    <p><em>¥</em>12.6</p>
+                                </div>
                             </div>
-                            <div class="p-title">
-                                ${elm.title}
-                            </div>
-                            <div class="p-price"><span class="yuan">￥</span>${elm.price}</div>
-                        </a>
-                    </li>`
-                    })
+                            </a>
+                        </li>`;
+                    });
 
                     $('item').html(temp);
                 }
