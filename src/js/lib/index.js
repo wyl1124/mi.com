@@ -11,17 +11,19 @@ define(['jquery'],function($){
                     console.log(res);
                     let temp = '';
                     res.forEach(elm=>(
-                        temp +=`<div class="i-size-box">
-                                <img class="img-agent lazyload" src="../img/2.jpg">
+                        temp +=`<a href="./detail.html" target="_blank">
+                        <div class="i-size-box">
+                            <img class="img-agent lazyload" src="${baseUrl}/src/${pic}">
+                        </div>
+                        <p class="i-size-tit is-tags-mark"><u class="jsd-tag"></u> ${elm.title} </p>
+                        <span data-pmid="77944676" data-productid="66384732"><em>¥</em>${elm.price}</span>
+                        <div class="marking save">
+                            <div class="boxs">
+                                <i>已省</i>
+                                <p><em>¥</em>12.6</p>
                             </div>
-                            <p class="i-size-tit is-tags-mark"><u class="jsd-tag"></u>MM 肥牛火锅片 900g</p>
-                            <span data-pmid="77944676" data-productid="66384732"><em>¥</em>73.8</span>
-                            <div class="marking save">
-                                <div class="boxs">
-                                    <i>已省</i>
-                                    <p><em>¥</em>12.6</p>
-                                </div>
-                            </div>`
+                        </div>
+                    </a>`
                     ))
 
                     $('item').html(temp);
