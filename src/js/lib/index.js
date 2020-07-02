@@ -1,4 +1,4 @@
-let baseUrl = "http://localhost/H5-2003/item";    //基础路径
+let baseUrl = "http://localhost/H5-2003/item1";    //基础路径
 
 define(['jquery'],function($){
     return{
@@ -34,7 +34,7 @@ define(['jquery'],function($){
                         </li>`;
                     });
 
-                    $('kuai-R').html(temp);
+                    $('list').html(temp);
                 }
             });
         }
