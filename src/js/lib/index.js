@@ -5,7 +5,7 @@ define(['jquery'],function($){
         render:function(){
             $.ajax({
                 type: "get",
-                url:`${baseUrl}/interface/getall.php`,
+                url:`${baseUrl}/src/interface/getall.php`,
                 dataType: "json",
                 success: function (response) {
                     console.log(response);
