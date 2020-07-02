@@ -543,30 +543,34 @@ body{
     margin-left: 250px;
     overflow: hidden;
     .item {
-        position: relative;
-        float: left;
-        width: 200px;
-        text-align: center;
-        transition: box-shadow .5s,-moz-box-shadow .5s;
-        border: 1px solid black;
-        margin: 20px;
-        overflow: hidden;
-        &:hover{
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        }
-        div {
+            list-style: none;
+            overflow: hidden;
+            margin: 50px;
+        .list>.item {
             float: left;
-            margin: 30px 10px;
+            width: 250px;
+            margin: 20px;
+            transition: margin-top .3s;
         }
         
-        .p-pic>img {
-            width: 226px;
-            height: 226px;
+        .list>.item:hover {
+            margin-top: 17px;
+            box-shadow: 2px 2px 2px #ccc;
         }
         
-        .p-title {
-            width: 500px;
+        .p-price {
+            color: red;
         }
+        
+        .list>.item>a {
+            text-decoration: none;
+            display: block;
+        }
+        
+        .yuan {
+            font-size: 12px;
+        }
+        
         //已省
         .marking {
             background: #fff200;

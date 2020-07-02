@@ -34,7 +34,7 @@ define(['jquery'],function($){
                         </li>`;
                     });
 
-                    $('item').html(temp);
+                    $('kuai-R').html(temp);
                 }
             });
         }
