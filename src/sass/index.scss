@@ -551,24 +551,18 @@ body{
         &:hover{
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
-        a {
-            display: block;
-            margin: 12px;
+        div {
+            float: left;
+            margin: 30px 10px;
         }
-        .i-size-box {
-            position: relative;
-            width: 100%;
-            padding-top: 100%;
-            
+        
+        .p-pic>img {
+            width: 226px;
+            height: 226px;
         }
-
-        img {
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            width: 100%;
-            height: 100%;
-            margin-bottom: 5px;
+        
+        .p-title {
+            width: 500px;
         }
         //已省
         .marking {

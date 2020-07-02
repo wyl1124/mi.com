@@ -616,24 +616,18 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.kuai-R .item a {
-  display: block;
-  margin: 12px;
+.kuai-R .item div {
+  float: left;
+  margin: 30px 10px;
 }
 
-.kuai-R .item .i-size-box {
-  position: relative;
-  width: 100%;
-  padding-top: 100%;
+.kuai-R .item .p-pic > img {
+  width: 226px;
+  height: 226px;
 }
 
-.kuai-R .item img {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 5px;
+.kuai-R .item .p-title {
+  width: 500px;
 }
 
 .kuai-R .item .marking {
