@@ -42,6 +42,9 @@ $ajax({
 
 })
 
+
+
+
 // //放大镜
 function Scale() {
     this.scale = document.querySelector('#box1');
