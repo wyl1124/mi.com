@@ -10,13 +10,13 @@ define(['jquery'],function($){
                 success: function (res) {
                     console.log(res);
                     let temp = '';
-                    
+                    console.log(typeof(temp))
                     res.forEach(elm => {
                         console.log(elm.pic);
                         let pic = JSON.parse(elm.pic);
                         console.log(pic[0].src);
                         temp += `<li class="item">
-                            <a href="${baseUrl}/src/html/product.html?id=${elm.id}">
+                            <a href="${baseUrl}/src/html/detail.html?id=${elm.id}">
                                 <div class="p-pic">
                                     <img src="${baseUrl}/src/${pic[0].src}">
                                 </div>
@@ -33,8 +33,8 @@ define(['jquery'],function($){
                             </a>
                         </li>`;
                     });
-
-                    $('list').html(temp);
+                 
+                    $('.kuai-R-list').html(temp);
                 }
             });
         }

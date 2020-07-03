@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>主页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-    <link rel="stylesheet" href="./../sass/index.css">
+    <link rel="stylesheet" href="../sass/index.css">
     <style>
-        .list {
+        .kuai-R-list {
             list-style: none;
             overflow: hidden;
         }
         
-        .list>.item {
+        .kuai-R-list>.item {
             float: left;
             width: 250px;
             margin: 20px;
             transition: margin-top .3s;
+            position: relative;
         }
         
-        .list>.item:hover {
+        .kuai-R-list>.item:hover {
             margin-top: 17px;
             box-shadow: 2px 2px 2px #ccc;
         }
@@ -33,7 +34,7 @@
             color: red;
         }
         
-        .list>.item>a {
+        .kuai-R-list>.item>a {
             text-decoration: none;
             display: block;
         }
@@ -411,7 +412,7 @@
             </div>
             <!--右-->
             <div class="kuai-R">
-                <ul class="list">
+                <ul class="kuai-R-list">
                     <!-- <li class="item">
                         <a href="javascript:;">
                             <div class="p-pic">
@@ -422,10 +423,10 @@
                             </div>
                             <div class="p-price"><span class="yuan">￥</span>73 </div>
                             <div class="marking save">
-                            <div class="boxs">
-                                <i>已省</i>
-                                <p><em>¥</em>12.6</p>
-                            </div>
+                                <div class="boxs">
+                                    <i>已省</i>
+                                    <p><em>¥</em>12.6</p>
+                                </div>
                         </div>
                         </a>
                     </li> -->
@@ -535,22 +536,6 @@
             <div class="kuai-R">
                 
             </div>
-        </div>
-
-        <div class="con-1">
-            
-        </div>
-        <div class="con-1">
-
-        </div>
-        <div class="con-1">
-
-        </div>
-        <div class="con-1">
-
-        </div>
-        <div class="con-1">
-
         </div>
     </div>
     </div>
@@ -840,11 +825,8 @@
             </div>
         </div>
     </div>
-    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script> -->
-    <!-- <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> -->
-    <!-- <script src="../js/ajax.js"></script> -->
-    <script src="../js/index.js"></script> 
+    
+    <script src="../js/index-h.js"></script> 
     <script src="../js/require.js" data-main="../js/main.index.js"></script>
 </body>
-
 </html>
