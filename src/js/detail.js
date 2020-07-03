@@ -12,35 +12,35 @@ let da = document.querySelector('.p1 a');//大标题
 let xiao = document.querySelector('.p2');//小标题
 //console.log(Xiaotu)
 
-$ajax({
-    url: '../lib/conn.php',
-    data: {
-        sid: id
-    },
-    success: function (data) {
-        let arrdata = JSON.parse(data);
-        Datu.src = arrdata.url;
-        Datu.sid=arrdata.sid;
-        Datu1.src = arrdata.url;
-        da.innerHTML = arrdata.title;
-        xiao.innerHTML = arrdata.title2;
-        mony.innerHTML = arrdata.price;
-        let url2 = arrdata.picelisturl.split(',');//获取小图数据进行渲染
-        console.log(url2);
-        let str = '';
-        console.log(str);
-        for (let i = 0; i < url2.length; i++) {//循环渲染数据
-            str += `           
-                    <img src="${url2[i]}">         
-            `;
-        }
-        str += '';
-        console.log(str);
-        console.log(Xiaotu);
-        Xiaotu.innerHTML = str;
-    }
+// $ajax({
+//     url: '../lib/conn.php',
+//     data: {
+//         sid: id
+//     },
+//     success: function (data) {
+//         let arrdata = JSON.parse(data);
+//         Datu.src = arrdata.url;
+//         Datu.sid=arrdata.sid;
+//         Datu1.src = arrdata.url;
+//         da.innerHTML = arrdata.title;
+//         xiao.innerHTML = arrdata.title2;
+//         mony.innerHTML = arrdata.price;
+//         let url2 = arrdata.picelisturl.split(',');//获取小图数据进行渲染
+//         console.log(url2);
+//         let str = '';
+//         console.log(str);
+//         for (let i = 0; i < url2.length; i++) {//循环渲染数据
+//             str += `           
+//                     <img src="${url2[i]}">         
+//             `;
+//         }
+//         str += '';
+//         console.log(str);
+//         console.log(Xiaotu);
+//         Xiaotu.innerHTML = str;
+//     }
 
-})
+// })
 
 
 

@@ -13,5 +13,5 @@
 
     echo $json;
 
-    $myspli->close();
+    $mysqli->close();
 ?>

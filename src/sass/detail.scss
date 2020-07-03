@@ -540,6 +540,7 @@ body {
         .s1 {
             width: 32.5%;
             color: #0069aa;
+            
             sub {
                 font-weight: bold;
                 font-size: 18px;
@@ -559,16 +560,10 @@ body {
                 color: #999;
                 vertical-align: 2px;
                 cursor: pointer;
+                margin-right: 200px;
             }
         }
-        .s2 {
-            height: 20px;
-            line-height: 20px;
-            margin-top: 6px;
-            text-align: center;
-            border-left: 1px solid #f2f2f2;
-            width: 37%;
-        }
+        
     }
     .tiao {
         position: relative;
@@ -706,35 +701,35 @@ body {
                 text-align: center;
             }
         }
-        .k-1 {
-            position: relative;
-            float: $left;
-            height: 50px;
-            line-height: 50px;
-            margin-left: 10px;
-            background-color: #6cae38;
-            border-radius: 2px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #fff;
-            margin-right: -2px;
-            z-index: 1;
-            cursor: Pointer;
-            width: 140px;
-            padding-left: 20px;
-            user-select: none;
-            i {
-                display: inline-block;
-                vertical-align: -2px;
+            .k-1 {
+                position: relative;
+                float: left;
+                height: 50px;
+                line-height: 50px;
+                margin-left: 10px;
+                background-color: #6cae38;
+                border-radius: 2px;
+                font-size: 16px;
+                font-weight: bold;
                 color: #fff;
-                width: 24px;
-                height: 24px;
-                line-height: 24px;
-                font-size: 24px;
-                font-weight: normal;
-                margin: 0 11px 0 -1px;
+                margin-right: -2px;
+                z-index: 1;
+                cursor: Pointer;
+                padding: 0 20px;
+                user-select: none;
+                strong {
+                    display: inline-block;
+                    vertical-align: -2px;
+                    color: #fff;
+                    width: 24px;
+                    height: 24px;
+                    line-height: 24px;
+                    font-size: 24px;
+                    font-weight: normal;
+                    margin: 0 11px 0 -1px;
+                }
             }
-        }
+        
     }
 }
 

@@ -6,9 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>购物车</title>
     <link rel="stylesheet" href="../sass/cart.css">
+    <script src="../js/require.js" data-main="../js/main.cart"></script>
+    <style>
+        .productlist {
+            list-style-type: none;
+            overflow: hidden;
+        }
+        
+        .item {
+            border: 1px solid black;
+            margin: 20px;
+            overflow: hidden;
+        }
+        
+        .item>div {
+            float: left;
+            margin: 30px 10px;
+        }
+        
+        .p-pic>img {
+            width: 100px;
+        }
+        
+        .p-title {
+            width: 500px;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- header -->
     <div class="header">
         <div class="box">
             <!----版心----->
@@ -127,7 +154,8 @@
             </div>
         </div>
     </div>
-    <div class="gwc">
+    <!-- 购物车 -->
+    <div class="gwc productslist">
         <div class="gwc-1">
             <div class="tou">
                 <h2>我的购物车</h2>
@@ -151,39 +179,64 @@
                     <span class="td td-7">操作</span>
                 </div>
                 <!--渲染内容-->
+                <!-- <ul class="productslist">
+                    <li class="item">
+                    <div class="c-box">
+                        <input type="checkbox" id="p1">
+                    </div>
+                    <div class="p-pic">
+                        <img src="../images/p01-0.jpg" alt="small">
+                    </div>
+                    <div class="p-title">
+                        苹果（Apple） MacBook Pro13.3英寸 2018新款/2017款苹果笔记本电脑 18款灰色/256G/带bar/MR9Q2CH/A
+                    </div>
+                    <div class="p-num">
+                        数量: <input type="number" value="2" min="1" max="20">
+                    </div>
+                    <div class="p-price">
+                        单价: 12468.00
+                    </div>
+                    <div class="p-price-sum">
+                        总价: 24936.00
+                    </div>
+                    <div class="p-del">
+                        <a href="javascript:;">删除</a>
+                    </div>
+                </li>
+                </ul> -->
                 <div class="neir2">
-                    <div class="lie">
-                         <div class="lie-1" style="display: none;">
-                            <div class="td td-1">
-                                <input type="checkbox">
-                            </div>
-                            <div class="td td-2" style="text-align: left;">
-                                <a href="" class="info-img">
-                                    <img src="">
-                                    <div class="kong"></div>
-                                </a>
-                                <h6 class="h6"><a href="">佳沛 新西兰进口 绿果大颗奇异果 3kg</a></h6>
-                                <p class="info">
-                                </p>
-                                <p class="info" style="margin-top:auto;">
-                                    支持极速达&nbsp;&nbsp;
-                                </p>
-                            </div>
-                            <div class="td td-3"><b>116</b></div>
-                            <div class="td td-4">
-                                <div class="ji">
-                                    <a class="jian iconfont">&#xe631;</a>
-
-                                <div class="pt">
-                                    <input type="text" value="1">
+                    <div class="table-tbody">
+                        <div class="bind-box  single">
+                            <div class="main-body first-main ">
+                                <div class="clear body-list first-list">
+                                    <div class="td tb-chk">
+                                        <input type="checkbox" id="p1">
+                                    </div>
+                                    <div class="clear td tb-info">
+                                        <a href="" target="" title="" class="info-img">
+                                            <img class="i-img" src="../img/2.93.jpg" alt="" onerror="this.src='//cart.samsclub.cn/statics/sam/img/cart/defaultproduct_90x90.png'"> 
+                                            <div class="kong"></div>
+                                        </a>
+                                        <h6 class="info-name" bagtype="1"><a href="" target="" title="">Member's Mark 188清远鸡 800g</a></h6>
+                                            <p class="info-waring">
+                                            </p>
+                                            <p class="info-waring" style="margin-top:auto;">
+                                                支持极速达&nbsp;&nbsp;
+                                            </p>
+                                    </div>
+                                    <div class="td tb-price">131.80</div>
+                                    <div class="td tb-amount">
+                                        <input type="number" value="2" min="1" max="10">
+                                    </div>
+                                    <div class="td tb-weight">2.7kg</div>
+                                    <div class="td tb-total"><span>¥</span>263.60</div>
+                                    <div class="td tb-oper">
+                                        <a href="javascript:;" class="iconfont icon-delete removeItemBtn" itemid="74480355_0-1" data-tpa="SAM_CART_DeleteBtn" data-event="add_cart" data-pmid="74480355" data-tce="amount-2"></a>
+                                    </div>
                                 </div>
-
-                                    <a class="jia iconfont">&#xe630;</a>
+            
                             </div>
                             </div>
-                            <div class="td td-5">3kg</div>
-                            <div class="td td-6">¥<span>116.00</span></div>
-                            <div class="td td-7"><a href="#">删除</a> </div>
                         </div>
                     </div>
                     <div class="liebiao">
@@ -216,7 +269,7 @@
                 </div>
             </div>
         </div>
-    </div>
+     </div>
     <div class="dibu">
         <div class="banxin">
             <div class="tu-x">
@@ -301,14 +354,14 @@
             </div>
         </div>
     </div>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="../../thirdplugins/jquery.cookie.js"></script>
     <script src="../js/cart.js"></script>
     <script>
          $('.header').load('index-header.html');
         $('.dibu').load('index-dibu.html');
-    </script>
+    </script> -->
 </body>
 
 </html>

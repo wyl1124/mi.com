@@ -424,165 +424,115 @@ body{
         width: 325px;
     }
     .neir2{
-        overflow: hidden;
-        .lie{
-            border-top: 1px solid #f7f7f7;
-            .lie-1{
-                position: relative;
-                height: 90px;
-                padding: 20px 0;
-                line-height: 26px;
-                .info-img{
-                    position: relative;
-                    float: left;
-                    width: 90px;
-                    height: 90px;
-                    img{
-                        width: 100%;
-                    }
-                }
-                h6{
-                    height: 40px;
-                    overflow: hidden;
-                    line-height: 20px;
-                    margin-left: 105px;
-                    font-weight: 500;
-                    font-size: 12px;
-                    a{
-                        color: #666;
-                    }
-                }
-                p{
-                    height: 20px;
-                    line-height: 20px;
-                    margin-left: 105px;
-                    margin-top: 5px;
-                    color: #666;
-                }
-                .td-3{
-                    font-size: 16px;
-                }
-                .td-4{
-                    .ji{
-                        width: 88px;
-                        height: 26px;
-                        line-height: 26px;
-                        margin: 0 auto;
-                        border: 1px solid #dfdfdf;
-                        .jian{
-                            float: left;
-                            width: 20px;
-                            height: 26px;
-                            text-align: center;
-                            font-size: 12px;
-                            color: #ddd;
-                        }
-                        .pt{
-                            float: left;
-                            width: 46px;
-                            height: 20px;
-                            line-height: 20px;
-                            margin-top: 3px;
-                            border-left: 1px solid #dfdfdf;
-                            border-right: 1px solid #dfdfdf;
-                            input{
+        .table-tbody{
+            .bind-box {
+                border-top: 1px solid #f7f7f7;
+                .main-body{
+                    .body-list {
+                        position: relative;
+                        height: 90px;
+                        padding: 20px 0;
+                            .tb-chk {
+                                width: 50px;
+                                float: left;
+                                text-align: center;
+                            }
+                            .tb-info {
+                                text-align: left;
+                                width: 325px;
+                                float: left;
+                                zoom: 1;
+                                .info-img {
+                                    position: relative;
+                                    float: left;
+                                    width: 90px;
+                                    height: 90px;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                    .kong {
+                                        display: none;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        background: rgba(255,255,255,0.6);
+                                    }
+                                }
+                                .info-name {
+                                    height: 40px;
+                                    overflow: hidden;
+                                    line-height: 20px;
+                                    margin-left: 105px;
+                                    font-weight: 500;
+                                    font-size: 12px;
+                                }
+                                .info-waring {
+                                    height: 20px;
+                                    line-height: 20px;
+                                    margin-left: 105px;
+                                    margin-top: 5px;
+                                }
+                                .info-waring {
+                                    height: 20px;
+                                    line-height: 20px;
+                                    margin-left: 105px;
+                                    margin-top: auto;
+                                }
+                                .clear:after {
+                                    visibility: hidden;
+                                    display: block;
+                                    font-size: 0;
+                                    content: " ";
+                                    clear: both;
+                                    height: 0;
+                                }
+
+                            }
+                            .tb-price {
+                                font-size: 14px;
+                            }
+                            .tb-amount {
                                 width: 100%;
                                 border: 0 none;
                                 text-align: center;
                             }
+                            .tb-weight {
+                                height: 24px;
+                                line-height: 24px;
+                            }
+                            .tb-total {
+                                height: 24px;
+                                line-height: 24px;
+                                font-weight: 700;
+                                color: #0069aa;
+                                span {
+                                    margin-right: 3px;
+                                }
+                            }
+                            .tb-oper {
+                                float: left;
+                                text-align: center;
+                                width: 160px;
+                            }
+
                         }
-                        .jia{
-                            float: right;
-                            width: 20px;
-                            height: 26px;
-                            text-align: center;
-                            font-size: 12px;
-                            color: #ddd;
+                        .clear:after {
+                            visibility: hidden;
+                            display: block;
+                            font-size: 0;
+                            content: " ";
+                            clear: both;
+                            height: 0;
                         }
                     }
                 }
-                .td-6{
-                    height: 24px;
-                    line-height: 24px;
-                    font-weight: 700;
-                    color: #0069aa;
-                    font-size:16px;
-                }
             }
-        }
+    
+        } 
         .liebiao{
-            overflow: hidden;
-            border-top: 1px solid #e3e3e3;
-            background: #f8f8f8;
-            .L{
-                position: relative;
-                float: $left;
-                padding: 10px 0;
-                .kong{
-                    position: relative;
-                    width: 30px;
-                    height: 40px;
-                    line-height: 40px;
-                    text-align: center;
-                    float: $left;
-                    padding: 0 10px;
-                }
-                .k{
-                    float: $left;
-                    height: 40px;
-                    line-height: 20px;
-                    padding: 0 10px;
-                    em{
-                        display: block;
-                    }
-                }
-                .k-1{
-                    a{
-                    color: #0069aa;
-                }}
-            }
-            .R{
-                position: relative;
-                float: right;
-                height: 60px;
-                .a1{
-                    float: right;
-                    width: 120px;
-                    height: 60px;
-                    line-height: 60px;
-                    font-size: 18px;
-                    text-align: center;
-                    background: #6cae38;
-                    font-family: "Microsoft Yahei";
-                    color: #fff;
-                }
-                .R-1{
-                    position: relative;
-                    float: right;
-                    height: 40px;
-                    padding: 10px 0;
-                    margin-right: 20px;
-                    line-height: 20px;
-                    em{
-                        display: block;
-                    }
-                    span{
-                        margin: 0 5px;
-                        color: #0069aa;
-                        font-size: 14px;
-                        i{
-                            font-style: normal;
-                            font-size: 18px;
-                            font-weight: 700
-                        }
-                    }
-                    .num{
-                        text-decoration: none;
-                    }
-                }
-            }
-       }
-    } .liebiao{
             overflow: hidden;
             border-top: 1px solid #e3e3e3;
             background: #f8f8f8;
