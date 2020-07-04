@@ -476,7 +476,6 @@ body {
 .shop #box1 .smallpic .movebox {
   left: 0;
   top: 0;
-  display: none;
   position: absolute;
   width: 180px;
   height: 150px;
@@ -488,7 +487,6 @@ body {
 
 .shop #box1 .bigImg {
   z-index: 10;
-  display: none;
   position: absolute;
   width: 500px;
   height: 500px;
@@ -852,4 +850,12 @@ body {
   height: 30px;
   line-height: 30px;
   color: #666;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }

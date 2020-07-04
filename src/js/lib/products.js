@@ -108,11 +108,12 @@ define(['jquery','cookie'],function($,cookie){
 
                     function fangda() {
                         var movebox = $('.movebox'),
-                            bigpic = $('.bigpic'),
+                            bigpic = $('#bigpic'),
                             big = $('.bigImg'),
                             smallpic = $('.smallpic'),
                             simg = document.querySelector('.smallpic>img'),
                             sbig = document.querySelector('.bigImg>img');
+                            console.log(bigpic);
                         // 1. 绑定事件
                         smallpic.on('mouseover', function() {
 
