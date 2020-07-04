@@ -346,6 +346,7 @@ body {
             overflow: hidden;
         }
         .yinz {
+            width: 1536px;
             display: none;
             z-index: 1000;
             position: absolute;
@@ -421,7 +422,7 @@ body {
         height: 500px;
         position: relative;
         float: $right;
-        #spic {
+        .smallpic {
             height: 500px;
             width: 500px;
             overflow: hidden;
@@ -433,7 +434,7 @@ body {
                     border: 1px solid #000;
                 }
             }
-            #sf {
+            .movebox {
                 left: 0;
                 top: 0;
                 display: none;
@@ -446,7 +447,7 @@ body {
                 cursor: move;
             }
         }
-        #df {
+        .bigImg {
             z-index: 10;
             display: none;
             position: absolute;
@@ -457,7 +458,7 @@ body {
             top: 0;
             border: 1px solid red;
         }
-        #datu {
+        .bigpic {
             width: 800px;
             height: 800px;
             position: absolute;
@@ -467,7 +468,7 @@ body {
     }
 }
 
-#list {
+.tup1 {
     img {
         width: 65px;
         &:hover{

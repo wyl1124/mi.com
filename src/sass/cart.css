@@ -366,6 +366,7 @@ body {
 }
 
 .three li .yinz {
+  width: 1536px;
   display: none;
   z-index: 1000;
   position: absolute;
@@ -509,7 +510,6 @@ body {
 
 .gwc .gwc-1 .title-1 .neir2 .table-tbody .bind-box .main-body .body-list .tb-info .info-img img {
   width: 100%;
-  height: 100%;
 }
 
 .gwc .gwc-1 .title-1 .neir2 .table-tbody .bind-box .main-body .body-list .tb-info .info-img .kong {

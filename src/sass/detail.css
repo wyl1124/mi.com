@@ -372,6 +372,7 @@ body {
 }
 
 .three li .yinz {
+  width: 1536px;
   display: none;
   z-index: 1000;
   position: absolute;
@@ -456,23 +457,23 @@ body {
   float: right;
 }
 
-.shop #box1 #spic {
+.shop #box1 .smallpic {
   height: 500px;
   width: 500px;
   overflow: hidden;
   border: 1px solid rebeccapurple;
 }
 
-.shop #box1 #spic img {
+.shop #box1 .smallpic img {
   width: 100%;
   height: 500px;
 }
 
-.shop #box1 #spic img:hover {
+.shop #box1 .smallpic img:hover {
   border: 1px solid #000;
 }
 
-.shop #box1 #spic #sf {
+.shop #box1 .smallpic .movebox {
   left: 0;
   top: 0;
   display: none;
@@ -485,7 +486,7 @@ body {
   cursor: move;
 }
 
-.shop #box1 #df {
+.shop #box1 .bigImg {
   z-index: 10;
   display: none;
   position: absolute;
@@ -497,7 +498,7 @@ body {
   border: 1px solid red;
 }
 
-.shop #box1 #datu {
+.shop #box1 .bigpic {
   width: 800px;
   height: 800px;
   position: absolute;
@@ -505,11 +506,11 @@ body {
   top: 0;
 }
 
-#list img {
+.tup1 img {
   width: 65px;
 }
 
-#list img:hover {
+.tup1 img:hover {
   border: 3px solid #000;
 }
 

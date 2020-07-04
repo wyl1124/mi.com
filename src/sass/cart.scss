@@ -300,10 +300,10 @@ body{
     }
     
     }
-.three{
-    height: 40px;
-    background-color: #004b8d;
-        li{
+    .three {
+        height: 40px;
+        background-color: #004b8d;
+        li {
             position: relative;
             float: left;
             //display: inline;
@@ -312,24 +312,24 @@ body{
             font-size: 14px;
             padding: 0 2%;
             cursor: pointer;
-            &:hover{
+            &:hover {
                 background: #f1f1f1;
-                
             }
-            &:hover .yinz{
+            &:hover .yinz {
                 display: block;
             }
-            &:hover a{
-                color: #004b8d ;
+            &:hover a {
+                color: #004b8d;
             }
-            a{
+            a {
                 display: block;
                 color: #fff;
                 max-width: 56px;
                 height: 40px;
                 overflow: hidden;
             }
-            .yinz{
+            .yinz {
+                width: 1536px;
                 display: none;
                 z-index: 1000;
                 position: absolute;
@@ -341,31 +341,32 @@ body{
                 border-top: 0;
                 background-color: #f1f1f1;
                 font-size: 12px;
-                .yinz-1{
+                .yinz-1 {
                     width: 115px;
                     padding-right: 10px;
-                    dl{
+                    dl {
                         padding-top: 15px;
-                        dt{
+                        dt {
                             height: 35px;
                             margin-bottom: 8px;
                             line-height: 35px;
                             font-size: 14px;
                             font-weight: 600;
                             border-bottom: 1px solid #333;
-                            a{
+                            a {
                                 color: #333;
                             }
                         }
-                        dd{
+                        dd {
                             height: 25px;
                             line-height: 25px;
-                            a{
+                            a {
                                 float: left;
                                 width: 78px;
                                 height: 25px;
                                 overflow: hidden;
-                                color: #333;;
+                                color: #333;
+                                ;
                             }
                         }
                     }
@@ -449,7 +450,6 @@ body{
                                     height: 90px;
                                     img {
                                         width: 100%;
-                                        height: 100%;
                                     }
                                     .kong {
                                         display: none;

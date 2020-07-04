@@ -19,27 +19,40 @@ define(['jquery','cookie'],function($,cookie){
                     <div class="shop">
                         <!--放大镜-->
                         <div id="box1">
-                            <div id="spic">
+                            <div class="smallpic">
                                 <!-- 小图 -->
                                 <img src="${baseUrl}/src/${pic[0].src}" alt="">
                                 <!--遮罩层-->
                                 <!-- 小放 -->
-                                <div id="sf"></div>
+                                <div class="movebox hide"></div>
                             </div>
-                            <div id="df">
+                            <div class="bigImg hide">
                                 <!-- 大放 -->
-                                <img src="${baseUrl}/src/${pic[0].src}" alt="" id="datu">
+                                <img src="${baseUrl}/src/${pic[0].src}" alt="" id="bigpic">
                                 <!-- 大图 -->
                             </div>
                         </div>
                         <!--小图切换-->
-                        <div id="list">
-                            <img src="${baseUrl}/src/${pic[0].src}" alt="">
-                            <img src="${baseUrl}/src/${pic[1].src}" alt="">
-                            <img src="${baseUrl}/src/${pic[2].src}" alt="">
-                            <img src="${baseUrl}/src/${pic[3].src}" alt="">
-                            <img src="${baseUrl}/src/${pic[4].src}" alt="">
-                        </div>
+                                <ul class="tup1">
+                                        <li class="aaa">
+                                            <img src="${baseUrl}/src/${pic[0].src}">
+                                        </li>
+                                        <li>
+                                            <img src="${baseUrl}/src/${pic[1].src}">
+                                        </li>
+                                        <li>
+                                            <img src="${baseUrl}/src/${pic[2].src}">
+                                        </li>
+                                        <li>
+                                            <img src="${baseUrl}/src/${pic[3].src}">
+                                        </li>
+                                        <li>
+                                            <img src="${baseUrl}/src/${pic[4].src}">
+                                        </li>
+                                        <li>
+                                            <img src="${baseUrl}/src/${pic[5].src}">
+                                        </li>
+                                    </ul>
                     </div>
                     <!--标题--->
                     <div class="ringt" style="width: 800px;">
@@ -92,9 +105,90 @@ define(['jquery','cookie'],function($,cookie){
                     $('.products-det').append(temp);
 
                     callback && callback(res.id,res.price); 
+
+                    function fangda() {
+                        var movebox = $('.movebox'),
+                            bigpic = $('.bigpic'),
+                            big = $('.bigImg'),
+                            smallpic = $('.smallpic'),
+                            simg = document.querySelector('.smallpic>img'),
+                            sbig = document.querySelector('.bigImg>img');
+                        // 1. 绑定事件
+                        smallpic.on('mouseover', function() {
+
+                            // 让元素显示
+                            movebox.addClass('show');
+                            big.addClass('show');
+
+                            // movebox的大小计算
+                            movebox.css({
+                                width: (smallpic.width() * big.width()) / bigpic.width() + 'px',
+                                height: (smallpic.height() * big.height()) / bigpic.height() + 'px',
+                            })
+
+
+                            // 2.让movebox跟随鼠标移动
+                            smallpic.on('mousemove', function(ev) {
+                                let top = ev.pageY - smallpic.offset().top - movebox.height() / 2;
+                                let left = ev.pageX - smallpic.offset().left - movebox.width() / 2;
+
+                                // 3.比例计算
+
+                                let ratio = bigpic.width() / smallpic.width(); // 小数 大于1的数
+
+                                // 边界管理
+                                if (top <= 0) {
+                                    top = 0;
+                                } else if (top >= smallpic.height() - movebox.height()) {
+                                    top = smallpic.height() - movebox.height() - 2;
+                                }
+
+                                if (left <= 0) {
+                                    left = 0;
+                                } else if (left >= smallpic.width() - movebox.width()) {
+                                    left = smallpic.width() - movebox.width() - 2;
+                                }
+
+                                movebox.css({
+                                    top: top + 'px',
+                                    left: left + 'px'
+                                });
+
+                                bigpic.css({
+                                    top: -top * ratio + 'px',
+                                    left: -left * ratio + 'px'
+                                });
+                            });
+                        });
+
+                        smallpic.on('mouseout', function() {
+                            movebox.removeClass('show');
+                            big.removeClass('show');
+                        });
+
+                        $('.tup1>li').on({
+                            'mouseover': function() {
+                                star.call(this);
+                                simg.src = `${baseUrl}/src/img/p${res.id-1}-${$('.tup1>li').index(this)}.jpg`;
+                                sbig.src = `${baseUrl}/src/img/p${res.id-1}-${$('.tup1>li').index(this)}.jpg`;
+                            },
+                            'mouseout': function() {
+                                $('.tup1>li').removeClass('aaa');
+                            }
+                        });
+
+                        function star() {
+                            // console.log(this);
+                            let _index = $('.tup1>li').index(this);
+                            $('.tup1>li').each(function(elm, i) {
+                                if (i == _index) $(elm).addClass('aaa');
+                            });
+                        }
+                    }
+                    fangda();
                 }
             });
-        },
+        },        
         additem:function(id,price,num){
 
             let shop = cookie.get('shop');
@@ -124,5 +218,7 @@ define(['jquery','cookie'],function($,cookie){
         }
     }
 })
+
+
 
 
