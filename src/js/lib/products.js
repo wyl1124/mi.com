@@ -28,7 +28,7 @@ define(['jquery','cookie'],function($,cookie){
                             </div>
                             <div class="bigImg hide">
                                 <!-- 大放 -->
-                                <img src="${baseUrl}/src/${pic[0].src}" alt="" id="bigpic">
+                                <img src="${baseUrl}/src/${pic[0].src}" alt="" class="bigpic">
                                 <!-- 大图 -->
                             </div>
                         </div>
@@ -108,7 +108,7 @@ define(['jquery','cookie'],function($,cookie){
 
                     function fangda() {
                         var movebox = $('.movebox'),
-                            bigpic = $('#bigpic'),
+                            bigpic = $('.bigpic'),
                             big = $('.bigImg'),
                             smallpic = $('.smallpic'),
                             simg = document.querySelector('.smallpic>img'),

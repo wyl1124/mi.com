@@ -75,7 +75,7 @@ define(['jquery','cookie'],function($,cookie){
                                     <input class="tb-amount" type="number" value="${arr[0].num}" min="1" max="${elm.num}">
                                     <div class="td tb-weight">${elm.kg}</div>
                                     <div class="td tb-total"><span>¥</span>${(arr[0].num*elm.price).toFixed(2)}</div>
-                                    <div class="td tb-oper">
+                                    <div class="td tb-oper" ddd="${elm.id}">
                                         <a href="javascript:;" class="iconfont icon-delete removeItemBtn" itemid="74480355_0-1" data-tpa="SAM_CART_DeleteBtn" data-event="add_cart" data-pmid="74480355" data-tce="amount-2"></a>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@ define(['jquery','cookie'],function($,cookie){
                             <div class="L">
                             <!--总和控件-->
                             <div class="kong"></div>
-                            <div class="k k-1"><a href="javascript:;">批量删除</a></div>
+                            <div class="k k-1 c2"><a href="javascript:;">批量删除</a></div>
                             <div class="k">
                                 <p><em>合计重量</em><span>${arr[0].num}*${elm.kg}</span></p>
                             </div>
@@ -96,7 +96,7 @@ define(['jquery','cookie'],function($,cookie){
                                 <p><em>预计运费</em><span>￥1</span></p>
                             </div>
                             <div class="k">
-                                <p><em>商品金额</em><span>￥${(arr[0].num*elm.price).toFixed(2)}</span></p>
+                                <p><em>商品金额</em><span>￥${(arr[0].num*elm.price)}</span></p>
                             </div>
                             <div class="k">
                                 <p><em>优惠金额</em><span>-￥0</span></p>
@@ -107,7 +107,7 @@ define(['jquery','cookie'],function($,cookie){
                         <a href="javascript:;" class="a1">去结算</a>
                         <div class="R-1">
                             <em>合计</em>
-                            <span>￥<i class="sl">${(arr[0].num*elm.price).toFixed(2)}</i></span>(<u class="num">1</u>件)
+                            <span>￥<i class="sl">${(arr[0].num*elm.price)}</i></span>(<u class="num">1</u>件)
                         </div>
                     </div>
                             `;
@@ -115,6 +115,23 @@ define(['jquery','cookie'],function($,cookie){
                         })
                         $('.table-tbody').append(tempstr);
                         $('.liebiao').append(temp);
+
+                        $('.tb-oper').on('click', function() {
+                            let rem = $(this).attr('ddd');
+                            let coo = [];
+                            shop.forEach(elm => {
+                                if (elm.id !== rem) {
+                                    coo.push(elm);
+                                }
+                            });
+                            cookie.set('shop', JSON.stringify(coo), 1);
+                            window.location.reload();
+                        });
+                        // 清空购物袋
+                        $('.c2').on('click', function() {
+                            cookie.remove('shop');
+                        })
+                        
                     }
                 });
             }
