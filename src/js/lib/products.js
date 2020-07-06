@@ -90,11 +90,11 @@ define(['jquery','cookie'],function($,cookie){
                         </div>
                         <div class="gwc">
                             <div class="k">
-                                <div class="jian iconfont">&#xe631;</div>
+                                <div class="jian iconfont del">&#xe631;</div>
                                 <div class="pt">
                                     <input type="number" value="1" class="value num" min="1" max="${res.num}">
                                 </div>
-                                <div class="jian iconfont">&#xe630;</div>
+                                <div class="jian iconfont add">&#xe630;</div>
                             </div>
                             <div class="k-1">
                                 <i class="iconfont">&#xe644;</i>加入购物车
@@ -187,6 +187,30 @@ define(['jquery','cookie'],function($,cookie){
                         }
                     }
                     fangda();
+
+                     // 增加数量按钮功能
+                     $('.add').on('click', function() {
+                        let num = $('.num').val();
+                        if (num >= res.num) {
+                            alert('您已购买为库存最大值了');
+                        } else {
+                            num++;
+                        }
+                        $('.num').val(num);
+                        // console.log(num);
+                    });
+
+                    // 减少数量的按钮功能
+                    $('.del').on('click', function() {
+                        let num = $('.num').val();
+                        if (num > 1) {
+                            num--;
+                        } else {
+                            num = 1;
+                        }
+                        $('.num').val(num);
+                        console.log(num);
+                    });
                 }
             });
         },        
